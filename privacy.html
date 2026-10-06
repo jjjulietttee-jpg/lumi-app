@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Dermio — Privacy Policy</title>
+<style>
+  :root { --bg:#141114; --card:#1D191D; --line:#2A252A; --text:#F7F2EE; --muted:#A79FA7; --peach:#FFB88C; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font-family:-apple-system,BlinkMacSystemFont,"Inter","Segoe UI",Roboto,sans-serif; line-height:1.65; }
+  .wrap { max-width:720px; margin:0 auto; padding:56px 24px 96px; }
+  h1 { font-size:30px; letter-spacing:-.02em; margin:0 0 4px; }
+  .eff { color:var(--muted); margin:0 0 32px; font-size:14px; }
+  h2 { font-size:19px; margin:36px 0 10px; }
+  p, li { color:#E7E0DC; }
+  .muted { color:var(--muted); }
+  a { color:var(--peach); }
+  ul { padding-left:20px; }
+  li { margin:6px 0; }
+  .back { display:inline-block; margin-bottom:28px; color:var(--peach); text-decoration:none; }
+  code { background:#241f24; padding:1px 6px; border-radius:6px; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <a class="back" href="/">← Dermio</a>
+    <h1>Privacy Policy</h1>
+    <p class="eff">Last updated: September 29, 2026</p>
+
+    <p>This Privacy Policy explains how <strong>Dermio</strong> ("Dermio", "we", "us") handles information when you use the Dermio mobile app. Dermio is designed to be privacy-first: it works without an account, and the only photos it sends for analysis are the ones you choose for a scan or a product check. By using Dermio you agree to this Policy.</p>
+
+    <h2>1. Information we process</h2>
+    <ul>
+      <li><strong>Photos you scan.</strong> Selfies you capture or select for a skin scan. They are stored <strong>only on your device</strong>. To generate your Skin Score, an image is transmitted securely to our analysis provider for a single, real-time evaluation and is <strong>not stored on our servers</strong> (see §2).</li>
+      <li><strong>Skin scores &amp; routine data.</strong> Your scores, streaks, routine, and notes are stored locally on your device.</li>
+      <li><strong>Purchase status.</strong> Whether you have an active subscription, provided by Apple. We never receive your card details.</li>
+      <li><strong>Purchase &amp; paywall events.</strong> Our subscription provider (Adapty) receives your purchase status, a random Adapty user identifier and device identifier, and events such as which paywall was shown, so we can deliver your subscription and understand which offers work. This is not used to track you across other apps or websites.</li>
+      <li><strong>Ad attribution.</strong> If you installed Dermio after tapping an Apple Search Ads ad, Apple's AdServices framework provides an attribution token that tells us the campaign led to the install. It carries no advertising identifier (IDFA) and is not linked to your identity.</li>
+      <li><strong>Device data.</strong> Standard technical data (device model, OS version, app version, a random install identifier).</li>
+    </ul>
+    <p class="muted">Dermio does not ask for your name, email, or phone number, and does not require you to create an account.</p>
+
+    <h2>2. How your photos are used</h2>
+    <p>When you run a scan, the image is sent over an encrypted connection to our secure processing function, which forwards it to our AI vision provider (<strong>OpenAI</strong>) solely to compute your skin scores. Images sent through the OpenAI API are <strong>not used to train models</strong> and are retained by the provider only transiently for abuse monitoring before deletion. We do not keep a copy of your photo on our servers. The photo file itself remains saved only in Dermio's storage on your device, and you can delete it at any time by deleting your scans or the app.</p>
+
+    <h2>2a. Skin assistant &amp; product checks</h2>
+    <p>If you ask the in-app skin assistant a question, your question and a short summary of your latest scores are sent over an encrypted connection to our processing function and on to OpenAI to write the answer. If you photograph a product label for a check, that one image is sent the same way to read the ingredients. We do not store these questions or label photos on our servers. A random install identifier is used only to apply daily usage limits.</p>
+
+    <h2>3. Third-party services</h2>
+    <ul>
+      <li><strong>Apple</strong> — subscriptions and payments (App Store).</li>
+      <li><strong>Adapty</strong> — subscription management and paywall analytics (purchase status, Adapty user and device identifiers, paywall-view events).</li>
+      <li><strong>Apple Search Ads (AdServices)</strong> — install attribution for ads on the App Store, without IDFA.</li>
+      <li><strong>OpenAI</strong> — one-time image analysis to compute your scores, assistant answers, and product-label checks.</li>
+    </ul>
+    <p>Each provider processes data under its own privacy terms.</p>
+
+    <h2>4. We do not sell your data</h2>
+    <p>We do not sell your personal information and do not use it for cross-app advertising or tracking. Dermio does not use the App Tracking Transparency tracking framework.</p>
+
+    <h2>5. Data retention &amp; deletion</h2>
+    <p>Your scans, scores, and routine live on your device and are removed when you delete them in-app or uninstall Dermio. Deleting the app removes all locally stored photos and data. To request deletion of any diagnostic data associated with your install identifier, email us.</p>
+
+    <h2>6. Children</h2>
+    <p>Dermio is not directed to children under 13 (or the minimum age required in your country) and is intended for users 17+.</p>
+
+    <h2>7. Not medical advice</h2>
+    <p>Dermio provides cosmetic, informational estimates of skin appearance for tracking purposes only. It is not a medical device and does not diagnose, treat, or prevent any condition. Consult a qualified dermatologist for medical concerns.</p>
+
+    <h2>8. Security</h2>
+    <p>Data in transit is protected with industry-standard encryption (HTTPS/TLS). No method of transmission or storage is 100% secure, but we take reasonable measures to protect your information.</p>
+
+    <h2>9. Changes</h2>
+    <p>We may update this Policy from time to time. Material changes will be reflected by the "Last updated" date above.</p>
+
+    <h2>10. Contact</h2>
+    <p>Questions about this Policy? Email <a href="mailto:nastya.shchaveleva@internet.ru">nastya.shchaveleva@internet.ru</a>.</p>
+  </div>
+</body>
+</html>
