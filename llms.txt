@@ -1,0 +1,21 @@
+# Dermio
+
+> Dermio turns a daily selfie into a clear skin score — and shows you, week after week, whether your routine is actually working.
+
+Dermio: AI Skin Scan & Score — Acne Tracker & Glow Journal. iPhone app, available on the App Store: https://apps.apple.com/app/id6794270397?pt=128839649&ct=ai_web
+
+## Guides
+
+- [How to Build a Daily Skincare Routine on iPhone](https://jjjulietttee-jpg.github.io/lumi-app/how-to-build-a-skincare-routine-on-iphone): Get a morning and evening skincare routine matched to your skin type and goal on iPhone, with reminders and streaks.
+- [How to Check Your Skin Glow Score on iPhone](https://jjjulietttee-jpg.github.io/lumi-app/how-to-check-your-skin-glow-on-iphone): Get a 0 to 100 skin glow score from a selfie on iPhone and learn how to read it over time.
+- [How to Track Acne and Skin Progress on iPhone](https://jjjulietttee-jpg.github.io/lumi-app/how-to-track-acne-progress-on-iphone): Track breakouts and other skin metrics with a daily selfie on iPhone, and see whether your routine is working over weeks.
+
+## App
+
+- [Home](https://jjjulietttee-jpg.github.io/lumi-app/): what Dermio does, features, pricing
+- [App Store](https://apps.apple.com/app/id6794270397?pt=128839649&ct=ai_web): download, screenshots, reviews
+
+## Optional
+
+- [Privacy](https://jjjulietttee-jpg.github.io/lumi-app/privacy)
+- [Terms](https://jjjulietttee-jpg.github.io/lumi-app/terms)

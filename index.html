@@ -1,58 +1,212 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Dermio — AI Skin & Glow Tracker</title>
+<meta name="generator" content="app_farm ai_site scaffold" />
+<title>Dermio: AI Skin Scan &amp; Score — Acne Tracker &amp; Face Analyzer</title>
+<meta name="description" content="Dermio turns a daily selfie into a clear skin score — and shows you, week after week, whether your routine is actually working." />
+<link rel="canonical" href="https://jjjulietttee-jpg.github.io/lumi-app/" />
+<meta name="robots" content="index, follow, max-snippet:-1" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Dermio" />
+<meta property="og:title" content="Dermio: AI Skin Scan &amp; Score — Acne Tracker &amp; Face Analyzer" />
+<meta property="og:description" content="Dermio turns a daily selfie into a clear skin score — and shows you, week after week, whether your routine is actually working." />
+<meta property="og:url" content="https://jjjulietttee-jpg.github.io/lumi-app/" />
+<meta property="og:image" content="https://jjjulietttee-jpg.github.io/lumi-app/app-icon.png" />
+<meta name="twitter:card" content="summary" />
+<meta name="apple-itunes-app" content="app-id=6794270397, app-argument=https://apps.apple.com/app/id6794270397?pt=128839649&amp;ct=ai_web" />
+<meta name="theme-color" content="#F7F7F5" />
+<link rel="icon" href="https://jjjulietttee-jpg.github.io/lumi-app/app-icon.png" type="image/png" />
+<link rel="apple-touch-icon" href="https://jjjulietttee-jpg.github.io/lumi-app/app-icon.png" />
 <style>
-  :root { --bg:#141114; --card:#1D191D; --line:#2A252A; --text:#F7F2EE; --muted:#A79FA7; --peach:#FFB88C; --rose:#FF8FA3; }
-  * { box-sizing:border-box; }
-  body { margin:0; background:var(--bg); color:var(--text); font-family:-apple-system,BlinkMacSystemFont,"Inter","Segoe UI",Roboto,sans-serif; line-height:1.6; }
-  .wrap { max-width:680px; margin:0 auto; padding:64px 24px 80px; }
-  .mark { width:64px; height:64px; border-radius:50%; margin:0 auto 24px;
-    background:radial-gradient(circle at 50% 40%, rgba(255,184,140,.25), transparent 70%);
-    border:2px solid transparent; background-clip:padding-box;
-    box-shadow:0 0 40px rgba(255,143,163,.35), inset 0 0 0 2px rgba(255,184,140,.9); }
-  h1 { font-size:34px; font-weight:700; text-align:center; margin:0 0 8px; letter-spacing:-.02em; }
-  .tag { text-align:center; color:var(--muted); margin:0 0 40px; }
-  .grad { background:linear-gradient(90deg,var(--peach),var(--rose)); -webkit-background-clip:text; background-clip:text; color:transparent; }
-  .card { background:var(--card); border:1px solid var(--line); border-radius:24px; padding:28px; margin:16px 0; }
-  .card h2 { margin:0 0 8px; font-size:18px; }
-  .card p { margin:0; color:var(--muted); }
-  a { color:var(--peach); text-decoration:none; }
-  a:hover { text-decoration:underline; }
-  .links { display:flex; gap:16px; justify-content:center; margin-top:32px; flex-wrap:wrap; }
-  footer { text-align:center; color:var(--muted); font-size:13px; margin-top:48px; }
+:root{color-scheme:light dark;--space-1:8px;--space-2:16px;--space-3:24px;--space-4:40px;--space-5:64px;--radius-sm:12px;--radius-md:18px;--radius-pill:999px;--measure:760px;--font:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Helvetica,Arial,sans-serif;--font-size:17px;--font-size-lede:19px;--font-size-small:14px;--bg:#F7F7F5;--surface:#FFFFFF;--surface-soft:#F0F0EC;--text:#1B1B1A;--text-secondary:#5F5F5A;--border:rgba(0,0,0,.09);--accent:#6C78FF;--on-accent:#FFFFFF;--accent-strong:#5D67DB;--accent-tint:rgba(108,120,255,.09)}
+@media (prefers-color-scheme:dark){:root{--bg:#111112;--surface:#18181A;--surface-soft:#1F1F22;--text:#F2F2F0;--text-secondary:#A2A29C;--border:rgba(255,255,255,.09);--accent:#6C78FF;--on-accent:#FFFFFF;--accent-strong:#818BFF;--accent-tint:rgba(108,120,255,.09)}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font);font-size:var(--font-size);line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+.wrap{max-width:var(--measure);margin:0 auto;padding:0 var(--space-2)}
+header.top{display:flex;justify-content:space-between;align-items:center;gap:var(--space-2);max-width:var(--measure);margin:0 auto;padding:var(--space-2)}
+.brand{display:flex;align-items:center;gap:var(--space-1);font-weight:700;color:var(--text);text-decoration:none}
+.brand img{width:28px;height:28px;border-radius:7px}
+.btn{display:inline-block;background:var(--accent);color:var(--on-accent);font-weight:700;text-decoration:none;padding:12px 22px;border-radius:var(--radius-pill)}
+.btn:hover{background:var(--accent-strong)}
+.btn--sm{padding:8px 16px;font-size:15px}
+h1{font-size:clamp(30px,6vw,44px);line-height:1.15;margin:var(--space-4) 0 var(--space-2);letter-spacing:-.02em}
+h2{font-size:26px;line-height:1.25;margin:var(--space-5) 0 var(--space-2)}
+h3{font-size:19px;margin:var(--space-3) 0 var(--space-1)}
+.lede{font-size:var(--font-size-lede);color:var(--text-secondary)}
+.meta,.note{color:var(--text-secondary);font-size:var(--font-size-small)}
+.answer{background:var(--surface-soft);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:var(--radius-md);padding:var(--space-2) var(--space-3);margin:var(--space-3) 0}
+.cards{list-style:none;padding:0;display:grid;gap:var(--space-2);grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.cards li{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-md);padding:var(--space-2)}
+.cards b{display:block;margin-bottom:4px}
+.cards a{text-decoration:none;font-weight:600}
+ol.steps{padding-left:0;list-style:none;counter-reset:s}
+ol.steps li{counter-increment:s;position:relative;padding:var(--space-2) var(--space-2) var(--space-2) 64px;margin:var(--space-2) 0;background:var(--surface-soft);border:1px solid var(--border);border-radius:var(--radius-md)}
+ol.steps li::before{content:counter(s);position:absolute;left:var(--space-2);top:var(--space-2);width:36px;height:36px;border-radius:50%;background:var(--accent);color:var(--on-accent);font-weight:800;display:grid;place-items:center}
+ol.steps b{display:block}
+.tablewrap{overflow-x:auto;border:1px solid var(--border);border-radius:var(--radius-md)}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:15px}
+th,td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--border);vertical-align:top}
+th{color:var(--text-secondary);font-weight:600;background:var(--surface)}
+tr:last-child td{border-bottom:0}
+tr.me td{background:var(--accent-tint)}
+details{background:var(--surface-soft);border:1px solid var(--border);border-radius:var(--radius-md);padding:var(--space-2);margin:var(--space-1) 0}
+summary{cursor:pointer;font-weight:600}
+details p{margin:var(--space-1) 0 0;color:var(--text-secondary)}
+.cta{text-align:center;margin:var(--space-5) 0;padding:var(--space-4) var(--space-2);background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-md)}
+footer{max-width:var(--measure);margin:var(--space-5) auto var(--space-4);padding:0 var(--space-2);color:var(--text-secondary);font-size:var(--font-size-small)}
+footer a{color:var(--text-secondary)}
+@media (max-width:480px){h2{font-size:22px}ol.steps li{padding-left:56px}.answer{padding:var(--space-2)}}
+
 </style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "SoftwareApplication",
+ "name": "Dermio: AI Skin Scan & Score",
+ "alternateName": "Dermio",
+ "operatingSystem": "iOS",
+ "applicationCategory": "Health & Fitness",
+ "url": "https://jjjulietttee-jpg.github.io/lumi-app/",
+ "description": "Dermio turns a daily selfie into a clear skin score — and shows you, week after week, whether your routine is actually working.",
+ "offers": {
+  "@type": "Offer",
+  "price": "0",
+  "priceCurrency": "USD",
+  "category": "Freemium"
+ },
+ "downloadUrl": "https://apps.apple.com/app/id6794270397?pt=128839649&ct=ai_web",
+ "image": "https://jjjulietttee-jpg.github.io/lumi-app/app-icon.png",
+ "publisher": {
+  "@type": "Person",
+  "name": "Dermio"
+ }
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "What is Dermio?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Dermio is an iPhone app that turns a daily selfie into a Skin Score from 0 to 100 with six metrics, builds a morning and evening routine, and tracks your progress with streaks and a weekly report."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Is Dermio free?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "There is a free tier with one scan per day and the overall Skin Score. Dermio Pro unlocks all six metrics, the personal routine, product check, the assistant and weekly reports, from $9.99 per month or $39.99 per year; monthly and yearly plans include a 3-day free trial."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Does Dermio diagnose skin conditions?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No. Dermio is for cosmetic tracking and general skincare guidance. It does not diagnose or treat medical conditions and is not a replacement for a dermatologist. See a doctor for any skin concern."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What happens to my selfie?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Photos are stored locally on your device. To analyse a scan, the downscaled selfie is sent securely to our server, which returns the scores. It is not processed entirely on the phone."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Which skin metrics does it score?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Breakouts, pores, hydration, tone, texture and dark circles, plus an overall Skin Score from 0 to 100."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How often should I scan?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Once a day, in similar lighting, is enough. Scores are smoothed over time so the trend matters more than any single reading."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can I cancel the subscription?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. The subscription renews automatically unless cancelled at least 24 hours before the end of the period. Cancel any time in your App Store account settings."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Does it work for all skin types and tones?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "The routine is matched to the skin type and goal you give in the quiz. Like any camera-based tool, results depend on lighting and photo quality, so treat scores as a trend indicator, not a measurement."
+   }
+  }
+ ]
+}
+</script>
 </head>
 <body>
-  <div class="wrap">
-    <div class="mark"></div>
-    <h1>Dermio</h1>
-    <p class="tag"><span class="grad">AI Skin &amp; Glow Tracker</span></p>
+<header class="top">
+  <a class="brand" href="https://jjjulietttee-jpg.github.io/lumi-app/"><img src="https://jjjulietttee-jpg.github.io/lumi-app/app-icon.png" alt="" width="28" height="28" />Dermio</a>
+  <a class="btn btn--sm" href="https://apps.apple.com/app/id6794270397?pt=128839649&amp;ct=ai_web">Get the App</a>
+</header>
+<main class="wrap">
+  <article>
+    <h1>Acne Tracker &amp; Face Analyzer</h1>
+    <p class="lede">Dermio turns a daily selfie into a clear skin score — and shows you, week after week, whether your routine is actually working.</p>
+    <p><a class="btn" href="https://apps.apple.com/app/id6794270397?pt=128839649&amp;ct=ai_web">Download Dermio on the App Store</a></p>
+    <h2>What Dermio does</h2>
+    <ul class="cards">
+      <li><b>Daily Skin Score</b>One selfie gives an overall Skin Score from 0 to 100, with scoring smoothed over time so one bad-light photo does not swing your trend.</li>
+      <li><b>Six skin metrics</b>Breakouts, pores, hydration, tone, texture and dark circles are each scored and tracked over time.</li>
+      <li><b>Personal AM/PM routine</b>Morning and evening steps matched to your skin type and goal, with gentle reminders.</li>
+      <li><b>Streaks and weekly report</b>Daily streaks, streak freezes for busy days, and a weekly skin report that summarises what changed.</li>
+      <li><b>Progress and before/after</b>See each metric trend over time and compare before and after photos side by side.</li>
+      <li><b>Product check</b>Snap the ingredient list on a bottle and see what may suit your skin and what to watch out for.</li>
+      <li><b>Skin assistant</b>Quick, practical answers about your skin and routine, based on your latest scan.</li>
 
-    <div class="card">
-      <h2>What Dermio does</h2>
-      <p>Dermio turns a daily selfie into a personal Glow Score, a simple morning &amp; evening routine, and a streak — so you can actually see your skin improve over time. It is a wellness &amp; tracking tool, not a medical device, and does not provide medical advice or diagnosis.</p>
-    </div>
+    </ul>
+    <h2>Guides</h2>
+    <ul class="cards">
+      <li><a href="https://jjjulietttee-jpg.github.io/lumi-app/how-to-track-acne-progress-on-iphone">How to Track Acne and Skin Progress on iPhone</a><br /><span class="note">Track breakouts and other skin metrics with a daily selfie on iPhone, and see whether your routine is working over weeks.</span></li>
+      <li><a href="https://jjjulietttee-jpg.github.io/lumi-app/how-to-build-a-skincare-routine-on-iphone">How to Build a Daily Skincare Routine on iPhone</a><br /><span class="note">Get a morning and evening skincare routine matched to your skin type and goal on iPhone, with reminders and streaks.</span></li>
+      <li><a href="https://jjjulietttee-jpg.github.io/lumi-app/how-to-check-your-skin-glow-on-iphone">How to Check Your Skin Glow Score on iPhone</a><br /><span class="note">Get a 0 to 100 skin glow score from a selfie on iPhone and learn how to read it over time.</span></li>
 
-    <div class="card">
-      <h2>Your privacy comes first</h2>
-      <p>Your photos are saved only on your device. Each scan is sent securely for one-time AI analysis and is never stored on our servers. Full details are in our Privacy Policy.</p>
-    </div>
+    </ul>
+        <h2>Price</h2>
+    <p>Free tier: one scan per day with the overall Skin Score only. Dermio Pro unlocks all six metrics, the personal routine, product check, the assistant and weekly reports: $9.99/month (3-day free trial) or $39.99/year (3-day free trial). Payment is charged to your Apple ID; manage or cancel in App Store account settings.</p>
 
-    <div class="card">
-      <h2>Support</h2>
-      <p>Questions, feedback, or account help? Email <a href="mailto:nastya.shchaveleva@internet.ru">nastya.shchaveleva@internet.ru</a> and we'll get back to you.</p>
-    </div>
+        <h2>Frequently asked questions</h2>
+    <details open><summary>What is Dermio?</summary><p>Dermio is an iPhone app that turns a daily selfie into a Skin Score from 0 to 100 with six metrics, builds a morning and evening routine, and tracks your progress with streaks and a weekly report.</p></details>
+    <details><summary>Is Dermio free?</summary><p>There is a free tier with one scan per day and the overall Skin Score. Dermio Pro unlocks all six metrics, the personal routine, product check, the assistant and weekly reports, from $9.99 per month or $39.99 per year; monthly and yearly plans include a 3-day free trial.</p></details>
+    <details><summary>Does Dermio diagnose skin conditions?</summary><p>No. Dermio is for cosmetic tracking and general skincare guidance. It does not diagnose or treat medical conditions and is not a replacement for a dermatologist. See a doctor for any skin concern.</p></details>
+    <details><summary>What happens to my selfie?</summary><p>Photos are stored locally on your device. To analyse a scan, the downscaled selfie is sent securely to our server, which returns the scores. It is not processed entirely on the phone.</p></details>
+    <details><summary>Which skin metrics does it score?</summary><p>Breakouts, pores, hydration, tone, texture and dark circles, plus an overall Skin Score from 0 to 100.</p></details>
+    <details><summary>How often should I scan?</summary><p>Once a day, in similar lighting, is enough. Scores are smoothed over time so the trend matters more than any single reading.</p></details>
+    <details><summary>Can I cancel the subscription?</summary><p>Yes. The subscription renews automatically unless cancelled at least 24 hours before the end of the period. Cancel any time in your App Store account settings.</p></details>
+    <details><summary>Does it work for all skin types and tones?</summary><p>The routine is matched to the skin type and goal you give in the quiz. Like any camera-based tool, results depend on lighting and photo quality, so treat scores as a trend indicator, not a measurement.</p></details>
 
-    <div class="links">
-      <a href="/privacy.html">Privacy Policy</a>
-      <a href="/terms.html">Terms of Use</a>
-      <a href="mailto:nastya.shchaveleva@internet.ru">Contact</a>
-    </div>
 
-    <footer>© 2026 Dermio. All rights reserved.</footer>
-  </div>
+    <div class="cta"><a class="btn" href="https://apps.apple.com/app/id6794270397?pt=128839649&amp;ct=ai_web">Try Dermio on your iPhone</a><p class="note">Free to download on the App Store.</p></div>
+
+  </article>
+
+</main>
+<footer>
+  <a href="https://jjjulietttee-jpg.github.io/lumi-app/">Dermio</a> · <a href="https://jjjulietttee-jpg.github.io/lumi-app/privacy.html">Privacy</a> · <a href="https://jjjulietttee-jpg.github.io/lumi-app/terms.html">Terms</a> · <a href="https://jjjulietttee-jpg.github.io/lumi-app/support.html">Support</a>
+</footer>
 </body>
 </html>
